@@ -1,0 +1,52 @@
+My under standing of this project
+
+We are developing a API with FastAPI which perdicts
+weather the out is positive, nutral or negative based on the
+text input we give [POST]
+
+Data set that we give is data.csv --> text, label
+
+we are using scikit-learn modle for model traing
+
+Our model is trainded by two process which are piplined
+
+
+model = Pipeline(
+    [
+        ('tfidf', TfidfVectorizer()),
+        ('clf', LogisticRegression())
+    ]
+) # A Pipeline in scikit-learn connects multiple ML steps into one single model object.
+
+
+>> ('tfidf', TfidfVectorizer()) --> Convert text → numerical vectors
+    > Computer doesn't understand text
+
+        Computers don’t understand text.
+        So:
+
+        "I love this product"
+        becomes something like:
+
+        [0.00, 0.78, 0.00, 0.45, 0.12, ...]
+
+
+        This is called TF-IDF encoding.
+
+        It gives:
+
+        High value to important words
+
+        Low value to common words like is, the, and
+
+>> ('clf', LogisticRegression()) -->  Learn patterns & predict sentiment
+
+Despite its name, it is not for regression here.
+It is a classification algorithm.
+
+Your model is doing:
+
+Text → Positive / Negative / Neutral
+
+
+So Logistic Regression finds a decision boundary between these classes.

@@ -9,6 +9,7 @@ data = pd.read_csv("../data/data.csv")
 x = data['text']
 y = data['label']
 
+# A Pipeline in scikit-learn connects multiple ML steps into one single model object.
 model = Pipeline(
     [
         ('tfidf', TfidfVectorizer()),
