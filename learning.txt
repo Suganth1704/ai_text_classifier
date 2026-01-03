@@ -50,3 +50,14 @@ Text → Positive / Negative / Neutral
 
 
 So Logistic Regression finds a decision boundary between these classes.
+
+LogisticRegression: [https://realpython.com/logistic-regression-python/#classification]
+    > Logistic regression falls under classification
+    > What is classification? -  classification is an area of supervised machine learning
+        that tries to predict which class or category some entitiy belongs to, based on the feature.
+    > There are two types of classification
+        1) Binary - Two optiones to choose eg: True or Flase
+         2) multiclass - More than two optiones like this model positive, nuteral or negative.
+Note: Regression - Problems have continuous and unbounded outputs.Eg: Salary of an employee based on exp or education
+      classification - Problems have bounded output. Eg: Grade of an employee based on years of experience,
+                        which will be like 1-3 years - C1, 3-6 - c2.
